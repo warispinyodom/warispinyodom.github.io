@@ -1,0 +1,217 @@
+/* css/style.css */
+
+/* Basic Resets & Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Prompt:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #2c3e50; /* Dark Blue/Gray */
+    --secondary-color: #3498db; /* Bright Blue */
+    --accent-color: #e74c3c; /* Red */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --border-color: #eee;
+}
+
+body {
+    font-family: 'Prompt', sans-serif; /* ใช้ Prompt หรือ Kanit ตามชอบ */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    margin: 10px 0;
+    font-size: 2.8em;
+    font-family: 'Kanit', sans-serif;
+    color: var(--secondary-color);
+}
+
+.hero-section .tagline {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+.contact-info span,
+.contact-info a {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-info i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* Main Content Sections */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Experience & Education */
+.job-entry, .edu-entry, .project-entry {
+    margin-bottom: 20px;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 15px;
+}
+
+.job-entry h3, .edu-entry h3, .project-entry h3 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    font-size: 1.3em;
+}
+
+.job-entry .date, .edu-entry .date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.job-entry ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-entry ul li {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.job-entry ul li i {
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+/* Skills Section */
+.skills-category {
+    margin-bottom: 20px;
+}
+
+.skills-category h3 {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-category ul li {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.skills-category ul li:hover {
+    background-color: var(--primary-color);
+}
+
+/* Projects Section */
+.project-entry a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-entry a:hover {
+    text-decoration: underline;
+}
+
+.project-entry i {
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 30px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-info span, .contact-info a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .skills-category ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
